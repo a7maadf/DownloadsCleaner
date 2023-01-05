@@ -81,7 +81,7 @@
 
 ### Setting up and using the portable version
 
-- Go to the repository's releases page and download the latest release.
+- Go to the repository's [releases page](https://github.com/a7maadf/DownloadsCleaner/releases/) and download the latest release.
 
 - Extract the downloaded files and place them in a folder other than the Downloads folder (e.g. `C:\Users\[user]\Downloads Folder Cleaner` is suggested).
 
