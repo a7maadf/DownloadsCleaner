@@ -8,7 +8,7 @@ import psutil
 from infi.systray import SysTrayIcon
 import pyautogui
 
-
+# Check if there is another instance of the same program is running and terminating it.
 def KillExistingProcess():
     try:
         PROCNAME = "DownloadsCleaner.exe"
@@ -61,14 +61,18 @@ def main(path):
                 if isLogActive == True:
                     try:
                         os.remove(path + "\\" + f)
-                        fileLog = open("logs.txt", "a", encoding='utf-8')
-                        fileLog.write("Deleted " + path + "\\" + f + "\n")
+                        fileLog = open("logs.txt", "r+", encoding='utf-8')
+                        content = fileLog.read()
+                        fileLog.seek(0, 0)
+                        fileLog.write(('"' + str(datetime.date.today()) + '" ' + "Deleted " + path + "\\" + f).rstrip('\r\n') + "\n" + content)
                         fileLog.close()
                     except Exception:
                         try:
                             shutil.rmtree(path + "\\" + f)
-                            fileLog = open("logs.txt", "a", encoding='utf-8')
-                            fileLog.write("Deleted " + path + "\\" + f + "\n")
+                            fileLog = open("logs.txt", "r+", encoding='utf-8')
+                            content = fileLog.read()
+                            fileLog.seek(0, 0)
+                            fileLog.write(('"' + str(datetime.date.today()) + '" ' + "Deleted " + path + "\\" + f).rstrip('\r\n') + "\n" + content)
                             fileLog.close()
                         except OSError as e:
                             print("Error: %s : %s" % (path + "\\" + f, e.strerror))
