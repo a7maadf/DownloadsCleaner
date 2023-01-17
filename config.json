@@ -1,8 +1,9 @@
 {
-    "firstSetup": true,
-    "freq": -1,
+    "firstSetup": false,
+    "freq": 30,
     "logs": true,
     "exec": [
+        "",
         "",
         ""
     ]

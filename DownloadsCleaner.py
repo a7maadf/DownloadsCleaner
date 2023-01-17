@@ -84,10 +84,16 @@ def openlogs(systray):
     except Exception:
         pyautogui.alert('Either you have disabled logs or there are no logs', "Error")
 
+def openConfig(systray):
+    try:
+        os.system('config.json')
+    except Exception:
+        pyautogui.alert('Error', "Error")
+
 def on_quit_callback(systray):
     os._exit(1)
 
-menu_options = (("Open Logs", None, openlogs),)
+menu_options = (("Open Logs", None, openlogs),("Edit Config", None, openConfig))
 systray = SysTrayIcon("logo.ico", "DownloadsCleaner", menu_options, on_quit=on_quit_callback)
 systray.start()
 
