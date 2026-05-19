@@ -239,3 +239,7 @@ If you have any questions, comments, or suggestions about the DownloadsCleaner u
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
+
+
+
+<img width="590" height="751" alt="image" src="https://github.com/user-attachments/assets/b215266b-2de4-40c8-8255-98e6dd1e173c" />
